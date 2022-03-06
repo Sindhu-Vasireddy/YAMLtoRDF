@@ -13,7 +13,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      GLOBAL_PATTERN: "*.yml"
+      GLOBAL_PATTERN: "*.yarrrml"
       SERIALIZATION_FORMAT: turtle
       OUTPUT_DIRECTORY: output
       CONVERT_ALL: true
