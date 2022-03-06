@@ -1,0 +1,33 @@
+prefixes:
+ ex: "https://example.com/person/"
+
+mappings:
+  person:
+    sources:
+      - ['source_2.csv~csv']
+    s: ex:$(id)
+    po:
+      - [a, foaf:Person]
+      - [foaf:givenName, $(firstname)]
+      - [foaf:familyName, $(lastname)]
+      - [foaf:name, $(name)]
+      - [foaf:nick, $(nickname)]
+      - [ex:org-id, $(org-id)]
+      - p: ex:works-in
+        o:
+            mapping: organization
+            condition:
+                function: equal
+                parameters:
+                    - [str1,$(org-id),s]
+                    - [str2,$(id),o]
+                
+
+
+  organization:
+    sources:
+      - ['data.json~jsonpath', '$.org[*]']
+    s: ex:$(id)
+    po:
+      - [a, foaf:Organization]
+      - [foaf:name, $(name)]
