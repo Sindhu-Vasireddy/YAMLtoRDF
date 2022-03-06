@@ -1,0 +1,41 @@
+@prefix ex: <https://example.com/person/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+ex:0 a foaf:Person;
+  foaf:familyName "Stacy";
+  foaf:givenName "Gwendolyne";
+  foaf:name "";
+  foaf:nick "Gwen";
+  ex:org-id "new-u";
+  ex:works-in ex:new-u .
+
+ex:1 a foaf:Person;
+  foaf:familyName "";
+  foaf:givenName "";
+  foaf:name "T'Challa";
+  foaf:nick "Black Panther";
+  ex:org-id "avngrs";
+  ex:works-in ex:avngrs .
+
+ex:2 a foaf:Person;
+  foaf:familyName "Maximoff";
+  foaf:givenName "Wanda";
+  foaf:name "";
+  foaf:nick "Scarlet Witch";
+  ex:org-id "avngrs";
+  ex:works-in ex:avngrs .
+
+ex:3 a foaf:Person;
+  foaf:familyName "Clarkson";
+  foaf:givenName "Rita";
+  foaf:name "";
+  foaf:nick "";
+  ex:org-id "new-u";
+  ex:works-in ex:new-u .
+
+ex:avngrs a foaf:Organization;
+  foaf:name "Avengers" .
+
+ex:new-u a foaf:Organization;
+  foaf:name "New U Technologies" .
